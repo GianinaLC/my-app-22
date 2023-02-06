@@ -1,4 +1,5 @@
 import './App.css';
+import Father from './components/containers/father';
 import TaskListComponent from './components/containers/task_list';
 import Greetingstyled from './components/pure/greetingStyles';
 import Ejemplo1 from './hooks/Ejemplo1';
@@ -10,13 +11,15 @@ function App() {
   return (
     <div className="App">
       {/* componentes de listado de tareas */}
-      <TaskListComponent />
+      {/*  <TaskListComponent /> */}
       {/*  <Ejemplo1></Ejemplo1> */}
       {/* <Ejemplo2></Ejemplo2> */}
       {/* <MiComponenteConContexto></MiComponenteConContexto> */}
       {/*  ejemplo4, todo lo que hay aqui, es tratado como prop.children*/}
       {/* <Ejemplo4 nombre='Laura'><h3>Contenido del prop.children</h3></Ejemplo4> */}
       {/* <Greetingstyled name='Giani'></Greetingstyled> */}
+      {/* gestion de eventos */}
+      <Father></Father>
     </div>
   );
 }

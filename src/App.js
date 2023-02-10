@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       {/* componentes de listado de tareas */}
-      {/*  <TaskListComponent /> */}
+      <TaskListComponent />
       {/*  <Ejemplo1></Ejemplo1> */}
       {/* <Ejemplo2></Ejemplo2> */}
       {/* <MiComponenteConContexto></MiComponenteConContexto> */}
@@ -19,7 +19,7 @@ function App() {
       {/* <Ejemplo4 nombre='Laura'><h3>Contenido del prop.children</h3></Ejemplo4> */}
       {/* <Greetingstyled name='Giani'></Greetingstyled> */}
       {/* gestion de eventos */}
-      <Father></Father>
+      {/* <Father></Father> */}
     </div>
   );
 }

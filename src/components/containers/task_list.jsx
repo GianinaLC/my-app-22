@@ -27,8 +27,31 @@ const TaskListComponent = () => {
         }
     },[tasks])
     
-    const changeCompleted = (id) => {
-        console.log('TODO cambiar estado de una tarea')
+    function completeTask(task) {
+        console.log('complete this task:', task);
+        const index = tasks.indexOf(task);
+        //lista temporal
+        const tempTasks = [...tasks ]
+        tempTasks[index].completed = !tempTasks[index].completed
+        //actualizamos el estado del componente (con la nueva lista actualizada), actualiza la tarea y se actualiza el icono
+        //el estado es inmutable, entonces le generamos un nuevo valor
+        setTasks(tempTasks);
+    }
+
+    function deleteTask(task) {
+        console.log('Delete this task:', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index, 1);
+        setTasks(tempTasks);
+    }
+
+     function addTask(task) {
+        console.log('Add this task:', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task);
+        setTasks(tempTasks);
     }
 
     return (
@@ -52,7 +75,8 @@ const TaskListComponent = () => {
                                 {tasks.map((task, index) => {
                                     return (
                                     
-                                        <TaskComponent key={index} task={task}></TaskComponent>
+                                        <TaskComponent key={index} task={task} complete={completeTask}
+                                        remove={deleteTask}></TaskComponent>
                                     )
                                 })}
                                   
@@ -60,10 +84,10 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
-                    <Taskform></Taskform>
                 </div>
-                
             </div>
+            <Taskform add={addTask}></Taskform>
+
             {/* TODO* aplicar un for/map para renderizar una lista */}
           {/*   <TaskComponent task={defaultTask}></TaskComponent>
  */}

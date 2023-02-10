@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import '../../styles/task.scss'
 import { LEVELS } from "../../models/levels.enum";
 
-const TaskComponent = ({ task }) => {
+const TaskComponent = ({ task, complete, remove }) => {
 
     useEffect(() => {
         console.log('tarea creada')
@@ -38,9 +38,9 @@ const TaskComponent = ({ task }) => {
 //es mas depurable si hacemos esta parte en una funcion
     function taskCompletedIcon() {
         if (task.completed) {
-            return(<i className="bi-toggle-on" style={{color: 'green'}}></i>) 
+            return(<i onClick={() => complete(task)} className="bi-toggle-on task-action" style={{color: 'green'}}></i>) 
         } else {
-            return(<i className="bi-toggle-off" style={{color: 'grey'}}></i>) 
+            return(<i onClick={() => complete(task)}  className="bi-toggle-off task-action" style={{color: 'grey'}}></i>) 
         }
     }
 
@@ -67,15 +67,20 @@ const TaskComponent = ({ task }) => {
 
                 {/* TODO: sustituir por un iconos */}
                 {/*  <span> {task.completed ? 'Completed' : 'Pending'}</span> */}
-                <i className="bi-trash" style={{color: 'tomato', fontSize: '20px'}}></i>
+                <i className="bi-trash task-action"
+                    style={{ color: 'tomato', fontSize: '20px' }}
+                    onClick={() => remove(task)}></i>
 
             </td>
         </tr>
     )
 }
-
+//controla el tipo de datos que vamos a obtener
+//al ser requerido, si no se lo pasamos tira error
 TaskComponent.propTypes = {
-    task : PropTypes.instanceOf(Task)
+    task: PropTypes.instanceOf(Task).isRequired,
+    complete: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired
 }
 
 export default TaskComponent;

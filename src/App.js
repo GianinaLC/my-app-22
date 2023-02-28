@@ -8,6 +8,7 @@ import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import Optionalrender from './components/pure/opcionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* ejemplos de renderizado condicional */}
       {/* <Optionalrender /> */}
       {/* ejemplo formik yup */}
-      <LoginFormik></LoginFormik>
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
     </div>
   );
 }

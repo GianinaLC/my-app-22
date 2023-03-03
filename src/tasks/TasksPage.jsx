@@ -1,5 +1,5 @@
 import React from "react";
-import TaskListComponent from '../../components/container/task_list'
+import TaskListComponent from '../components/containers/task_list'
 const Taskpage = () => {
     return (
         <div>

@@ -9,6 +9,8 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import Optionalrender from './components/pure/opcionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
 
 function App() {
   return (
@@ -20,14 +22,21 @@ function App() {
       {/* <MiComponenteConContexto></MiComponenteConContexto> */}
       {/*  ejemplo4, todo lo que hay aqui, es tratado como prop.children*/}
       {/* <Ejemplo4 nombre='Laura'><h3>Contenido del prop.children</h3></Ejemplo4> */}
+
       {/* <Greetingstyled name='Giani'></Greetingstyled> */}
       {/* gestion de eventos */}
       {/* <Father></Father> */}
+
       {/* ejemplos de renderizado condicional */}
       {/* <Optionalrender /> */}
+
       {/* ejemplo formik yup */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
+
+      {/* ejemplos asincronos */}
+      {/* <AsyncExample /> */}
+      <ObservableExample />
     </div>
   );
 }

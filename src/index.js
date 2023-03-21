@@ -12,9 +12,9 @@ import AppRoutingOneFinal from './AppRoutingOneFinal';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <AppRoutingOne /> */}
-    <AppRoutingOneFinal />
+    <App />
+    {/* <AppRoutingOne />
+    <AppRoutingOneFinal /> */}
   </React.StrictMode>
 );
 

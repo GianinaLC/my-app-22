@@ -1,5 +1,5 @@
 import './App.css';
-import Father from './components/containers/father';
+/* import Father from './components/containers/father';
 import TaskListComponent from './components/containers/task_list';
 import Greetingstyled from './components/pure/greetingStyles';
 import Ejemplo1 from './hooks/Ejemplo1';
@@ -10,7 +10,8 @@ import Optionalrender from './components/pure/opcionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import AsyncExample from './components/pure/AsyncExample';
-import ObservableExample from './components/pure/ObservableExample';
+import ObservableExample from './components/pure/ObservableExample'; */
+import FetchExample from './components/pure/FetchExample';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
 
       {/* ejemplos asincronos */}
       {/* <AsyncExample /> */}
-      <ObservableExample />
+      {/* <ObservableExample /> */}
+      <FetchExample />
     </div>
   );
 }

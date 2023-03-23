@@ -1,4 +1,5 @@
 import './App.css';
+import AxiosExample from './components/pure/AxiosExample';
 /* import Father from './components/containers/father';
 import TaskListComponent from './components/containers/task_list';
 import Greetingstyled from './components/pure/greetingStyles';
@@ -38,7 +39,8 @@ function App() {
       {/* ejemplos asincronos */}
       {/* <AsyncExample /> */}
       {/* <ObservableExample /> */}
-      <FetchExample />
+      {/*  <FetchExample /> */}
+      <AxiosExample />
     </div>
   );
 }

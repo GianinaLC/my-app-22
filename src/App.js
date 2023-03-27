@@ -1,4 +1,5 @@
 import './App.css';
+import Axioscrudexample from './components/pure/AxiosCRUDExample';
 import AxiosExample from './components/pure/AxiosExample';
 /* import Father from './components/containers/father';
 import TaskListComponent from './components/containers/task_list';
@@ -40,7 +41,8 @@ function App() {
       {/* <AsyncExample /> */}
       {/* <ObservableExample /> */}
       {/*  <FetchExample /> */}
-      <AxiosExample />
+      {/* <AxiosExample /> */}
+      <Axioscrudexample />
     </div>
   );
 }
